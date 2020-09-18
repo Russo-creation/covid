@@ -5,7 +5,11 @@ import { Content } from "./HomePage.css";
 
 import * as statisticsActions from "../../store/actions/statistics/actionCreator";
 
+import { useTranslation } from "react-i18next";
+
 const HomePage = () => {
+  const { t, i18n } = useTranslation(["home", "translation"]);
+
   const statisticsLoading = useSelector((state) => state.statistics.loading);
   const statisticsError = useSelector((state) => state.statistics.error);
   const { statistics } = useSelector((state) => state.statistics);
@@ -41,6 +45,15 @@ const HomePage = () => {
 
   return (
     <Content>
+      {/*  <Trans i18nKey="test"></Trans> */}
+      {t("home:test")}
+      <button
+        onClick={() =>
+          i18n.changeLanguage(i18n.language === "en" ? "pl" : "en")
+        }
+      >
+        change Lang
+      </button>
       <div>Home Page</div>
     </Content>
   );

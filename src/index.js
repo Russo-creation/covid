@@ -6,11 +6,19 @@ import * as serviceWorker from "./serviceWorker";
 import store from "./store/store";
 import { Provider } from "react-redux";
 
+import LoadingIndicator from "./components/LoadingIndicator";
+
 import "./i18n";
 
 ReactDOM.render(
   <Provider store={store}>
-    <Suspense fallback={<div>Loading</div>}>
+    <Suspense
+      fallback={
+        <div>
+          Loading <LoadingIndicator />
+        </div>
+      }
+    >
       <React.StrictMode>
         <App />
       </React.StrictMode>

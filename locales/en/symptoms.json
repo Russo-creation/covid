@@ -1,0 +1,26 @@
+{
+  "symptoms": {
+    "title": "SYMPTOMS OF COVID",
+    "titleDescription": "This is the most common symptoms of virus if you have one you definetlay shoud stay at home and report this!",
+    "fever": "Fever",
+    "cough": "Cough",
+    "heavyBreathing": "Heavy breathing",
+    "sorethroat": "Sore throat"
+  },
+  "protect": {
+    "title": "HOW TO PROTECT YOURSELF?",
+    "titleDescription": "This is the most common one of the best solutions for protecting you from being infected",
+    "protectFirst": {
+      "title": "Wash your hands",
+      "titleDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in"
+    },
+    "protectSecond": {
+      "title": "keep distance",
+      "titleDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in"
+    },
+    "protectThird": {
+      "title": "Cough in your bent elbow",
+      "titleDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in"
+    }
+  }
+}

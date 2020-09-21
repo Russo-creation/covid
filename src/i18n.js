@@ -11,7 +11,7 @@ i18n
     defaultLanguage: "en",
     otherLanguages: ["pl"],
     fallbackLng: "en",
-    debug: true,
+    // debug: true,
     defaultNS: "translation",
     //saveMissing: true,
 

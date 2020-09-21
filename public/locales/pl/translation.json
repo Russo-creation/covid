@@ -1,1 +1,8 @@
-{}
+{
+  "navigator": {
+    "home": "home",
+    "symptomps": "symptomy",
+    "statistics": "statistyki",
+    "liveCounter": "aktualny licznik"
+  }
+}

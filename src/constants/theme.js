@@ -6,6 +6,7 @@ const theme = {
     hoverAccent: "#c97700",
     textPrimary: "#ffffff",
     textSecondary: "#d0d0d0",
+    grayColor: "#707070",
   },
 };
 

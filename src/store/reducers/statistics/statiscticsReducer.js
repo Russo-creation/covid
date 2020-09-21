@@ -4,7 +4,7 @@ import {
   STATISTICS_GET_REQUEST,
 } from "../../actions/statistics/actionTypes";
 
-import Statistic from "../../../model/Statistic";
+import StatisticsByCountry from "../../../model/StatisticsByCountry";
 
 const inialState = {
   statistics: [],
@@ -15,21 +15,48 @@ const inialState = {
 export const statisticsReducer = (state = inialState, action) => {
   switch (action.type) {
     case STATISTICS_GET_SUCCESS:
-      const loadedStatistics = [];
-      for (const key in action.payload) {
-        loadedStatistics.push(
-          new Statistic(
-            action.payload[key]["id"],
-            action.payload[key]["userId"],
-            action.payload[key]["title"],
-            action.payload[key]["body"]
-          )
-        );
-      }
+      let groupStatsByMonth = [],
+        groupKey = 0;
+
+      groupStatsByMonth = action.payload.reduce((r, o) => {
+        let m = o.Date.split("-")[1];
+        r[m]
+          ? r[m].data.push(
+              new StatisticsByCountry(
+                o["Country"],
+                o["Confirmed"],
+                o["Deaths"],
+                o["Recovered"],
+                o["Active"],
+                o["Date"]
+              )
+            )
+          : (r[m] = {
+              group: String(groupKey++),
+              dateGrup: o.Date.split("-")[0] + "-" + o.Date.split("-")[1],
+              data: [
+                new StatisticsByCountry(
+                  o["Country"],
+                  o["Confirmed"],
+                  o["Deaths"],
+                  o["Recovered"],
+                  o["Active"],
+                  o["Date"]
+                ),
+              ],
+            });
+        return r;
+      }, {});
+
+      let result = Object.keys(groupStatsByMonth).map(
+        (k) => groupStatsByMonth[k]
+      );
+
+      console.log(result);
 
       return {
         ...state,
-        statistics: loadedStatistics,
+        statistics: result,
         loading: false,
         error: null,
       };

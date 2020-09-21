@@ -1,0 +1,26 @@
+{
+  "symptoms": {
+    "title": "objawy COVID",
+    "titleDescription": "To najczęstsze objawy wirusa, jeśli go masz, zdecydowanie powinieneś zostać w domu i zgłosić to!",
+    "fever": "gorączka",
+    "cough": "kaszel",
+    "heavyBreathing": "trudności z oddychaniem",
+    "sorethroat": "ból gardła"
+  },
+  "protect": {
+    "title": "Jak się chronić?",
+    "titleDescription": "Jest to najpowszechniejsze jedno z najlepszych rozwiązań chroniących Cię przed infekcją",
+    "protectFirst": {
+      "title": "Myj ręce",
+      "titleDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in"
+    },
+    "protectSecond": {
+      "title": "zachowaj odstęp",
+      "titleDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in"
+    },
+    "protectThird": {
+      "title": "kaszl we własny łokieć",
+      "titleDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in"
+    }
+  }
+}

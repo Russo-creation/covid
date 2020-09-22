@@ -1,47 +1,47 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0b4ce8a5abfdb0e0a9556a3ebab007a9",
+    "revision": "b119ac8ceac2988c32ed27f5e2fa41cc",
     "url": "/covid/index.html"
   },
   {
-    "revision": "b450247fe54abc910933",
+    "revision": "364a0294e71dd572df5c",
     "url": "/covid/static/css/4.a60c9901.chunk.css"
   },
   {
-    "revision": "56848d2485e96b2a5c1d",
-    "url": "/covid/static/css/main.093eeb9a.chunk.css"
+    "revision": "4bbca7c4177419d932d2",
+    "url": "/covid/static/css/main.82d204eb.chunk.css"
   },
   {
-    "revision": "e34a98410ff2fd3ac213",
-    "url": "/covid/static/js/2.4941e1d8.chunk.js"
+    "revision": "7e44d9e9da0cc95b6d14",
+    "url": "/covid/static/js/2.33b87567.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/covid/static/js/2.4941e1d8.chunk.js.LICENSE.txt"
+    "url": "/covid/static/js/2.33b87567.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a565985cdf9cb2f26e47",
-    "url": "/covid/static/js/3.dd9db61d.chunk.js"
+    "revision": "a49f6f3790f1e97fc354",
+    "url": "/covid/static/js/3.7f0e7b74.chunk.js"
   },
   {
-    "revision": "bd777d96aa413f0a6ad86ace13baac09",
-    "url": "/covid/static/js/3.dd9db61d.chunk.js.LICENSE.txt"
+    "revision": "0c9129cadb537e09f72a418cd55d1d3d",
+    "url": "/covid/static/js/3.7f0e7b74.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b450247fe54abc910933",
-    "url": "/covid/static/js/4.733de8a6.chunk.js"
+    "revision": "364a0294e71dd572df5c",
+    "url": "/covid/static/js/4.d790a1e1.chunk.js"
   },
   {
-    "revision": "bd717da02e652aecd4bc",
-    "url": "/covid/static/js/5.571f2dec.chunk.js"
+    "revision": "6b12981abd3f2d5b0e39",
+    "url": "/covid/static/js/5.afad5c78.chunk.js"
   },
   {
-    "revision": "56848d2485e96b2a5c1d",
-    "url": "/covid/static/js/main.0bb51693.chunk.js"
+    "revision": "4bbca7c4177419d932d2",
+    "url": "/covid/static/js/main.3836d2da.chunk.js"
   },
   {
-    "revision": "ba493792aafe0c0acb72",
-    "url": "/covid/static/js/runtime-main.f11d01bc.js"
+    "revision": "898ef40bb2d5ffe034c8",
+    "url": "/covid/static/js/runtime-main.10798c08.js"
   },
   {
     "revision": "678b2820d697bdc09c3de71db936fb35",

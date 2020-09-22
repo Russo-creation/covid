@@ -2,10 +2,10 @@
   "symptoms": {
     "title": "objawy COVID",
     "titleDescription": "To najczęstsze objawy wirusa, jeśli go masz, zdecydowanie powinieneś zostać w domu i zgłosić to!",
-    "fever": "gorączka",
-    "cough": "kaszel",
-    "heavyBreathing": "trudności z oddychaniem",
-    "sorethroat": "ból gardła"
+    "fever": "Gorączka",
+    "cough": "Kaszel",
+    "heavyBreathing": "Trudności z oddychaniem",
+    "sorethroat": "Ból gardła"
   },
   "protect": {
     "title": "Jak się chronić?",

@@ -31,12 +31,12 @@ const PageScrollIndicator = () => {
         to={scrollTrackerList[0]}
         spy={true}
         smooth={true}
-        offset={smoothScroolValues.offset}
+        offset={0}
         duration={smoothScroolValues.duration}
       >
         <DotWrapper>
           <CircularProgressbar
-            value={pageIndex === 0 ? pageProgress : 0}
+            value={pageIndex === 0 ? pageProgress : pageIndex < 1 ? 0 : 100}
             strokeWidth={6}
             styles={buildStyles({
               pathColor: theme.light.main,
@@ -51,12 +51,12 @@ const PageScrollIndicator = () => {
         to={scrollTrackerList[1]}
         spy={true}
         smooth={true}
-        offset={smoothScroolValues.offset}
+        offset={-60}
         duration={smoothScroolValues.duration}
       >
         <DotWrapper>
           <CircularProgressbar
-            value={pageIndex === 1 ? pageProgress : 0}
+            value={pageIndex === 1 ? pageProgress : pageIndex < 1 ? 0 : 100}
             strokeWidth={6}
             styles={buildStyles({
               pathColor: theme.light.main,
@@ -71,12 +71,12 @@ const PageScrollIndicator = () => {
         to={scrollTrackerList[2]}
         spy={true}
         smooth={true}
-        offset={smoothScroolValues.offset}
+        offset={-60}
         duration={smoothScroolValues.duration}
       >
         <DotWrapper>
           <CircularProgressbar
-            value={pageIndex === 2 ? pageProgress : 0}
+            value={pageIndex === 2 ? pageProgress : pageIndex < 2 ? 0 : 100}
             strokeWidth={6}
             styles={buildStyles({
               pathColor: theme.light.main,
@@ -91,12 +91,12 @@ const PageScrollIndicator = () => {
         to={scrollTrackerList[3]}
         spy={true}
         smooth={true}
-        offset={smoothScroolValues.offset}
+        offset={-60}
         duration={smoothScroolValues.duration}
       >
         <DotWrapper>
           <CircularProgressbar
-            value={pageIndex === 3 ? pageProgress : 0}
+            value={pageIndex === 3 ? pageProgress : pageIndex < 3 ? 0 : 100}
             strokeWidth={6}
             styles={buildStyles({
               pathColor: theme.light.main,

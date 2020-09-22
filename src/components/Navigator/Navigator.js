@@ -28,9 +28,11 @@ const SelectTypeForMobile = () => {
     i18n.changeLanguage(event.target.value);
   };
 
+  let langValue = i18n.language.substring(0, 2);
+
   return (
     <div>
-      <Select value={i18n.language} onChange={handleChangeLanguage}>
+      <Select value={langValue} onChange={handleChangeLanguage}>
         <option value="en">EN</option>
         <option value="pl">PL</option>
       </Select>
@@ -42,7 +44,7 @@ const ButtonsMenu = ({ pageIndex, scrollTrackerList, hideMenu }) => {
   const { t } = useTranslation(["translation"]);
 
   const smoothScroolValues = {
-    offset: 1,
+    offset: 300,
     duration: 600,
   };
 
@@ -54,7 +56,7 @@ const ButtonsMenu = ({ pageIndex, scrollTrackerList, hideMenu }) => {
         to={scrollTrackerList[0]}
         spy={true}
         smooth={true}
-        offset={smoothScroolValues.offset}
+        offset={0}
         duration={smoothScroolValues.duration}
       >
         <ButtonMenu selected={pageIndex === 0 ? true : false}>
@@ -71,7 +73,7 @@ const ButtonsMenu = ({ pageIndex, scrollTrackerList, hideMenu }) => {
         to={scrollTrackerList[1]}
         spy={true}
         smooth={true}
-        offset={smoothScroolValues.offset}
+        offset={-60}
         duration={smoothScroolValues.duration}
       >
         <ButtonMenu selected={pageIndex === 1 ? true : false}>
@@ -88,7 +90,7 @@ const ButtonsMenu = ({ pageIndex, scrollTrackerList, hideMenu }) => {
         to={scrollTrackerList[2]}
         spy={true}
         smooth={true}
-        offset={smoothScroolValues.offset}
+        offset={-60}
         duration={smoothScroolValues.duration}
       >
         <ButtonMenu selected={pageIndex === 2 ? true : false}>
@@ -105,7 +107,7 @@ const ButtonsMenu = ({ pageIndex, scrollTrackerList, hideMenu }) => {
         to={scrollTrackerList[3]}
         spy={true}
         smooth={true}
-        offset={smoothScroolValues.offset}
+        offset={-60}
         duration={smoothScroolValues.duration}
       >
         <ButtonMenu selected={pageIndex === 3 ? true : false}>

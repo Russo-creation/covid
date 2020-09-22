@@ -1,46 +1,26 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 import covidBcg from "../../../../images/covidBcg.jpg";
-
-export const cameraPam = keyframes`
-  0% {
-    background-position: 35% 0%;
-  }
-  25% {
-    background-position: 33% 20%;
-  }
-  50% {
-    background-position: 35% 30%;
-  }
-  75% {
-    background-position: 37% 20%;
-  }
-  100% {
-    background-position: 35% 0%;
-  }
-`;
 
 export const Backgroud = styled.div`
   width: 100%;
   height: 110vh;
-  // background-position: 35% 0%;
+  background-position: 35% 0%;
   background: url("${covidBcg}");
   position: relative;
 
   background-size: cover;
-  animation: ${cameraPam} 20s infinite;
 `;
 
 export const BackgroudBlurred = styled.div`
   width: 100%;
   height: 100%;
-  // background-position: 35% 0%;
+  background-position: 35% 0%;
   background: url("${covidBcg}");
   filter: blur(8px);
   -webkit-filter: blur(10px);
 
   background-size: cover;
-  animation: ${cameraPam} 20s infinite;
 `;
 
 export const BannerContainer = styled.div`

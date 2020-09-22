@@ -68,61 +68,12 @@ const MainPage = () => {
   }
 
   // console.log(statistics);
-  let val1 = 0;
-  let val2 = 0;
-  let val3 = 0;
-  let val4 = 0;
-
-  if (document.getElementById("HomeContent")) {
-    val1 = document.getElementById("HomeContent").getBoundingClientRect()
-      .height;
-  }
-
-  if (document.getElementById("SymptomsContent")) {
-    val2 = document.getElementById("SymptomsContent").getBoundingClientRect()
-      .height;
-  }
-
-  if (document.getElementById("StatisticsContent")) {
-    val3 = document.getElementById("StatisticsContent").getBoundingClientRect()
-      .height;
-  }
-
-  if (document.getElementById("LiveCounterContent")) {
-    val4 = document.getElementById("LiveCounterContent").getBoundingClientRect()
-      .height;
-  }
 
   return (
     <>
       <Navigator />
       <PageScrollIndicator />
 
-      {/* <div
-        id="HomeContent"
-        style={{ height: "110vh", width: "100%", background: "yellow" }}
-      >
-        {val1}
-      </div>
-      <div
-        id="SymptomsContent"
-        style={{ height: "130vh", width: "100%", background: "green" }}
-      >
-        {val2} {val1}
-      </div>
-      <div
-        id="StatisticsContent"
-        style={{ height: "150vh", width: "100%", background: "blue" }}
-      >
-        {val3} {val1 + val2}
-      </div>
-      <div
-        id="LiveCounterContent"
-        style={{ height: "170vh", width: "100%", background: "pink" }}
-      >
-        {val4} {val1 + val2 + val3}
-      </div>
- */}
       <div>
         <HomeContent />
         <SymptomsContent />

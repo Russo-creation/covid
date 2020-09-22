@@ -127,6 +127,7 @@ export const LanguageCenter = styled.div`
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 100%;
+  padding-right: 1px;
 `;
 
 export const LangText = styled.div`
@@ -146,7 +147,7 @@ export const Select = styled.select`
   height: 34px;
   margin: 0;
   border: 1px solid RGBA(255, 255, 255, 0.5);
-  text-align: center;
+  text-align: left;
   padding-left: 13px;
   font-weight: bold;
   border-radius: 0;

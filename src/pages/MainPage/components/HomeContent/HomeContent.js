@@ -15,6 +15,7 @@ import {
 
 const HomeContent = () => {
   const sectionRef = useRef(null);
+  const { t } = useTranslation(["home"]);
 
   const intersection = useIntersection(sectionRef, {
     root: null,
@@ -24,15 +25,19 @@ const HomeContent = () => {
 
   if (sectionRef.current) {
     const fadeIn = (element) => {
-      gsap.to(element, {
-        duration: 1.5,
-        opacity: 1,
-        y: 0,
-        ease: "power4.out",
-        stagger: {
-          amount: 20,
-        },
-      });
+      gsap.fromTo(
+        element,
+        { opacity: 0, y: 100 },
+        {
+          duration: 1.5,
+          opacity: 1,
+          y: 0,
+          ease: "power4.out",
+          stagger: {
+            amount: 20,
+          },
+        }
+      );
     };
 
     const fadeOut = (element) => {
@@ -49,12 +54,10 @@ const HomeContent = () => {
       : fadeIn(".fadeIn");
   }
 
-  const { t } = useTranslation(["home"]);
-
   return (
     <Backgroud id="HomeContent" ref={sectionRef}>
       <BackgroudBlurred></BackgroudBlurred>
-      <BannerContainer className="fadeIn" style={{ opacity: "0" }}>
+      <BannerContainer className="fadeIn" style={{ opacity: 0 }}>
         <CenterText>
           {t("centerFirst")} <RedCovidText>{t("centerSecond")}</RedCovidText>
         </CenterText>

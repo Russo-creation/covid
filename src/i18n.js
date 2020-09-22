@@ -18,6 +18,12 @@ i18n
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
+
+    backend: {
+      loadPath: "/covid/locales/{{lng}}/{{ns}}.json",
+    },
+
+    /* lng: locale.split("-")[0], */
   });
 
 export default i18n;

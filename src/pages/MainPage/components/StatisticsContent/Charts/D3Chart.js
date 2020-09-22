@@ -17,6 +17,8 @@ export default class D3Chart {
       MARGIN.TOP -
       MARGIN.BOTTOM;
 
+    if (WIDTH < 0) console.log("teraz za mało nie wyrenderowany");
+
     if (WIDTH < 0) WIDTH = 375 - MARGIN.LEFT - MARGIN.RIGHT;
 
     if (HEIGHT < 0) HEIGHT = 300 - MARGIN.TOP - MARGIN.BOTTOM;
@@ -96,7 +98,7 @@ export default class D3Chart {
 
     if (!statisticsDate) statisticsDate = 0;
     vis.data = vis.fetchedData[statisticsDate].data;
-    vis.xLabel.text(`Date: ${vis.fetchedData[statisticsDate].dateGrup}`);
+    vis.xLabel.text(`Poland Date: ${vis.fetchedData[statisticsDate].dateGrup}`);
 
     if (!chartIndex) chartIndex = 0;
     vis.yLabel.text(

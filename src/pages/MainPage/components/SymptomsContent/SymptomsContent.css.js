@@ -49,6 +49,8 @@ export const SymptomContainer = styled.div`
 `;
 
 export const SymptomCage = styled.div`
+  opacity: 0;
+  top: 100px;
   height: 250px;
   border: 1px dashed silver;
 

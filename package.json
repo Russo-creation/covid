@@ -2,11 +2,13 @@
   "name": "covid",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://russo-creation.github.io/covid/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "d3": "^6.1.1",
+    "gh-pages": "^3.1.0",
     "gsap": "^3.5.1",
     "i18next": "^19.7.0",
     "i18next-browser-languagedetector": "^6.0.1",
@@ -14,6 +16,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-circular-progressbar": "^2.0.3",
+    "react-device-detect": "^1.13.1",
     "react-dom": "^16.13.1",
     "react-i18next": "^11.7.2",
     "react-icons": "^3.11.0",
@@ -30,6 +33,8 @@
     "styled-components": "^5.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

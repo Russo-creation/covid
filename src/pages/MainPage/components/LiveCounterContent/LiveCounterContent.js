@@ -39,11 +39,11 @@ const LiveCounterContent = () => {
             <div>Link to github repository</div>
             <div>
               <a
-                href="https://github.com/Russo-creation/my.portfolio"
+                href="https://github.com/Russo-creation/covid"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                https://github.com/Russo-creation/my.portfolio
+                https://github.com/Russo-creation/covid
               </a>
             </div>
           </RightText>

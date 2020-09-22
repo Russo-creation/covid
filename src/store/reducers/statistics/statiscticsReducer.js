@@ -52,8 +52,6 @@ export const statisticsReducer = (state = inialState, action) => {
         (k) => groupStatsByMonth[k]
       );
 
-      console.log(result);
-
       return {
         ...state,
         statistics: result,

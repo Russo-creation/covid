@@ -32,6 +32,22 @@ export const ThreeContainer = styled.div`
   box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
 `;
 
+export const ChoosedData = styled.footer`
+  position: absolute;
+  // left: 50%;
+
+  //transform: translateX(-50%);
+
+  right: 0;
+
+  top: 0;
+  border: 1px solid white;
+  color: red;
+  font-size: 20px;
+  padding: 10px;
+  z-index: 1;
+`;
+
 export const Footer = styled.footer`
   background: #161616;
   padding: 20px;

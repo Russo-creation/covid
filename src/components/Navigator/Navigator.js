@@ -127,6 +127,7 @@ const Navigator = () => {
   const scrollTrackerList = useSelector(
     (state) => state.scrollTracker.scrollTrackerListFolds
   );
+
   const pageIndex = useSelector((state) => state.scrollTracker.scrollTrackSet);
 
   const handleShowMenu = () => {

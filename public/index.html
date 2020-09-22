@@ -29,6 +29,26 @@
 </head>
 
 <body>
+  <script id="vertexShader2" type="x-shader/x-vertex">
+		varying vec3 vNormal;
+		void main() 
+		{
+			vNormal = normalize( normalMatrix * normal );
+			gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+		}
+		</script>
+
+  <!-- fragment shader a.k.a. pixel shader -->
+  <script id="fragmentShader2" type="x-shader/x-vertex">
+		varying vec3 vNormal;
+		void main() 
+		{
+			float intensity = pow( 0.6 - dot( vNormal, vec3( 0.0, 0.0, 1.0 ) ), 13.0 ); 
+			gl_FragColor = vec4( 1.0, 1.0, 1.0, 1.0 ) * intensity;
+		}
+		</script>
+
+
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <!--

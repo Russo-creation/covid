@@ -13,6 +13,8 @@ import {
   ChoosedData,
 } from "./LiveCounterContent.css";
 
+import App from "./Charts/App";
+
 import LoadingIndicator from "../../../../components/LoadingIndicator";
 
 import { useTranslation } from "react-i18next";
@@ -95,12 +97,20 @@ const LiveCounterContent = () => {
             <ChoosedData>{t("markerClick")}</ChoosedData>
           )}
 
+          <div id="PieChart">
+            <App
+              statistics={statisticsSummary}
+              hoverPie={ClickedMarkerOnPlanet}
+            />
+          </div>
+
           <ThreeInit
             markerClickHandler={ClickedMarkerOnPlanet}
             continetalDeathData={statisticsSummary}
           />
         </ThreeContainer>
       </Root>
+
       <Footer>
         <FooterContainer>
           <LeftText>

@@ -42,3 +42,10 @@
 #mainChart {
   width: 100%;
 }
+
+#mainChartPie {
+  position: absolute;
+  z-index: 1;
+  right: 0px;
+  bottom: 0px;
+}

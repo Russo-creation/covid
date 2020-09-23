@@ -1,6 +1,6 @@
 {
   "pageTitle": "Ilość zgonów spowodowanych przez COVID 19 w podanych krajach",
-  "markerClick": "Kliknij marker na planecie, aby wyświetlić dane",
+  "markerClick": "Kliknij marker na planecie lub najedź kursorem na wykres, aby wyświetlić dane",
   "country": "kraj:",
   "totalDeaths": "Całkowita liczba zgonów:"
 }

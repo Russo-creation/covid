@@ -60,7 +60,7 @@ export const ChoosedData = styled.footer`
   text-transform: uppercase;
 
   box-shadow: 0px 0px 5px 0px ${(props) => props.theme.light.main};
-  background: ${(props) => props.theme.light.main};
+  background: red;
 `;
 
 export const Footer = styled.footer`

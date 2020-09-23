@@ -10,7 +10,6 @@ import {
   RenderPass,
   SMAAEffect,
   TextureEffect,
-  BokehEffect,
   GodRaysEffect,
 } from "postprocessing";
 
@@ -97,7 +96,9 @@ export default function Effects({ sun }) {
     composer.pass = true;
 
     return composer;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => void composer.setSize(size.width, size.height), [size]);
   return useFrame((_, delta) => composer.render(delta), 1);
 }

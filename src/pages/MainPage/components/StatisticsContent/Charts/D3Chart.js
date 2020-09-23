@@ -4,7 +4,7 @@ const MARGIN = { TOP: 10, BOTTOM: 50, LEFT: 70, RIGHT: 10 };
 let WIDTH, HEIGHT;
 
 export default class D3Chart {
-  constructor(element, fetchedData) {
+  constructor(element, fetchedData, statisticsDate, chartIndex) {
     const vis = this;
 
     WIDTH =
@@ -17,7 +17,14 @@ export default class D3Chart {
       MARGIN.TOP -
       MARGIN.BOTTOM;
 
-    if (WIDTH < 0) console.log("teraz za mało nie wyrenderowany");
+    if (WIDTH < 0 || HEIGHT < 0) {
+      const windowWidth = window.innerWidth;
+      if (windowWidth <= 1024) {
+        WIDTH = 375 - MARGIN.LEFT - MARGIN.RIGHT;
+      } else {
+        WIDTH = 600 - MARGIN.LEFT - MARGIN.RIGHT;
+      }
+    }
 
     if (WIDTH < 0) WIDTH = 375 - MARGIN.LEFT - MARGIN.RIGHT;
 
@@ -53,7 +60,7 @@ export default class D3Chart {
 
     vis.yAxisGroup = vis.svg.append("g");
 
-    console.log(fetchedData);
+    // console.log(fetchedData);
 
     ////////
 
@@ -62,7 +69,7 @@ export default class D3Chart {
     vis.menData = fetchedData[0].data;
     vis.womenData = fetchedData[1].data;
 
-    vis.update();
+    vis.update(statisticsDate, chartIndex);
   }
 
   handleMouseOver(d, i) {
@@ -93,8 +100,6 @@ export default class D3Chart {
 
   update(statisticsDate, chartIndex) {
     const vis = this;
-
-    console.log(statisticsDate);
 
     if (!statisticsDate) statisticsDate = 0;
     vis.data = vis.fetchedData[statisticsDate].data;

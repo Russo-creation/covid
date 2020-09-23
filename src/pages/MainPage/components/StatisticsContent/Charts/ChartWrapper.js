@@ -21,7 +21,14 @@ const ChartWrapper = ({ statistics, statisticsDate, chartIndex }) => {
           console.log("recreate");
           chartArea.current.innerHTML = "";
 
-          setChart(new D3Chart(chartArea.current, statistics));
+          setChart(
+            new D3Chart(
+              chartArea.current,
+              statistics,
+              statisticsDate,
+              chartIndex
+            )
+          );
         }, 500);
       }
 
@@ -36,12 +43,15 @@ const ChartWrapper = ({ statistics, statisticsDate, chartIndex }) => {
   useEffect(() => {
     if (!chart) {
       chartArea.current.innerHTML = "";
-      setChart(new D3Chart(chartArea.current, statistics));
+      setChart(
+        new D3Chart(chartArea.current, statistics, statisticsDate, chartIndex)
+      );
     }
     // skip the loading state, when data is still a pending promise
     else if (chart.menData) {
       chart.update(statisticsDate, chartIndex);
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chart, statisticsDate, chartIndex]);
 

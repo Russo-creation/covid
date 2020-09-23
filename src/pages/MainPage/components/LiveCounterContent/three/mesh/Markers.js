@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 import { useFrame } from "react-three-fiber";
 
-const Marker = () => {
+/* const Marker = () => {
   var radius = 5;
   var sphereRadius = 2;
   var height = 1;
@@ -30,7 +30,7 @@ const Marker = () => {
       </mesh>
     </>
   );
-};
+}; */
 
 const CreateMarker = ({ lat, lon, id, markerClickHandler, deaths }) => {
   const [active, setActive] = useState(false);

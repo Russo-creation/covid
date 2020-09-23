@@ -1,7 +1,7 @@
 import React, { useRef, Suspense } from "react";
 import * as THREE from "three";
-import { Canvas, extend, useThree, useFrame } from "react-three-fiber";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { Canvas, useFrame } from "react-three-fiber";
+//import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import Lights from "./lights/Lights";
 
 import MeshLoader from "./mesh/MeshCreator";
@@ -9,9 +9,9 @@ import MeshLoader from "./mesh/MeshCreator";
 import Effects from "./effects/Effects.js";
 
 import { ReactReduxContext, Provider } from "react-redux";
-import { Html } from "drei";
+/* import { Html } from "drei";
 
-import LoadingIndicator from "../../../../../components/LoadingIndicator";
+import LoadingIndicator from "../../../../../components/LoadingIndicator"; */
 
 import Curve from "./Curve";
 
@@ -39,7 +39,7 @@ const curveMoving = (curveGeometry, speed, direction) => {
   return pos;
 };
 
-extend({ OrbitControls });
+//extend({ OrbitControls });
 
 const Controls = (props) => {
   const curveGeometry = new THREE.TubeBufferGeometry(Curve(), 100, 1, 1, true);
@@ -52,7 +52,7 @@ const Controls = (props) => {
   return null;
 };
 
-function LoadingBox() {
+/* function LoadingBox() {
   return (
     <mesh position={[200, 0, 200]}>
       <dodecahedronBufferGeometry attach="geometry" />
@@ -66,7 +66,7 @@ function LoadingBox() {
       </Html>
     </mesh>
   );
-}
+} */
 
 const ThreeInit = ({ markerClickHandler, continetalDeathData }) => {
   const sun = useRef();
@@ -116,7 +116,7 @@ const ThreeInit = ({ markerClickHandler, continetalDeathData }) => {
               />
             </mesh>
 
-            <Suspense fallback={<LoadingBox />}>
+            <Suspense fallback={null}>
               <group position={[-400, 0, 0]}>
                 <Lights />
                 <MeshLoader

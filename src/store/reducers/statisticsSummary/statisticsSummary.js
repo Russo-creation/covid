@@ -4,7 +4,7 @@ import {
   STATISTICS_SUMMARY_GET_REQUEST,
 } from "../../actions/statisticsSummary/actionTypes";
 
-import StatisticsSummary from "../../../model/StatisticsSummary";
+//import StatisticsSummary from "../../../model/StatisticsSummary";
 
 const continetalDeathData = [
   {

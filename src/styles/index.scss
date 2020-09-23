@@ -10,3 +10,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+.content {
+  padding-top: 10px;
+  text-align: left;
+  background: white;
+  color: red;
+  padding: 10px 15px;
+  border-radius: 5px;
+  height: 400vh;
+  width: 600vw;
+  font-size: 60vw;
+}

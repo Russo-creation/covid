@@ -23,6 +23,8 @@ import breathingImg from "../../../../images/breathing.png";
 import soreThroatImg from "../../../../images/sore-throat.png";
 
 import washHands from "../../../../images/washHands.jpg";
+import socialDistance from "../../../../images/socialDistance.jpg";
+import wearMask from "../../../../images/wearMask.jpg";
 
 import { useTranslation } from "react-i18next";
 
@@ -110,7 +112,7 @@ const SymptomsContent = () => {
         <ProtectCage>
           <ProtectTitle>{t("protect.protectSecond.title")}</ProtectTitle>
           <ImageDecorator right></ImageDecorator>
-          <ProtectImage uri={washHands}></ProtectImage>
+          <ProtectImage uri={socialDistance}></ProtectImage>
           <ImageDecorator left></ImageDecorator>
           <ProtectDescription>
             {t("protect.protectSecond.titleDescription")}
@@ -119,7 +121,7 @@ const SymptomsContent = () => {
         <ProtectCage>
           <ProtectTitle>{t("protect.protectThird.title")}</ProtectTitle>
           <ImageDecorator right></ImageDecorator>
-          <ProtectImage uri={washHands}></ProtectImage>
+          <ProtectImage uri={wearMask}></ProtectImage>
           <ImageDecorator left></ImageDecorator>
           <ProtectDescription>
             {t("protect.protectThird.titleDescription")}

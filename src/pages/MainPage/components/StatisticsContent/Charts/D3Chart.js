@@ -105,7 +105,7 @@ export default class D3Chart {
       chartIndex === 0
         ? "Confirmed cases of infections COVID 19"
         : chartIndex === 1
-        ? "Death due to COVID 19"
+        ? "Deaths caused by COVID 19"
         : "recovered from COVID 19"
     );
 

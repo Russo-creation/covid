@@ -1,3 +1,6 @@
 {
-  "pageTitle": "Kontynentalny licznik żyć"
+  "pageTitle": "Ilość zgonów spowodowanych przez COVID 19 w podanych krajach",
+  "markerClick": "Kliknij marker na planecie, aby wyświetlić dane",
+  "country": "kraj:",
+  "totalDeaths": "Całkowita liczba zgonów:"
 }

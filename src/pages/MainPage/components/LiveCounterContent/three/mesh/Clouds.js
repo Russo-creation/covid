@@ -10,16 +10,13 @@ const CloudsCreator = () => {
   useFrame(() => (meshClouds.current.rotation.y += 0.002));
 
   return (
-    <mesh ref={meshClouds}>
-      <sphereBufferGeometry
-        attach="geometry"
-        args={[182.003, 44, 44]}
-        position={[0, 0, 0]}
-      />
+    <mesh ref={meshClouds} position={[0, 0, 0]}>
+      <sphereBufferGeometry attach="geometry" args={[181.003, 44, 44]} />
       <meshPhongMaterial
         attach="material"
         map={mapAlbedoClouds}
         transparent={true}
+        depthWrite={false}
       />
     </mesh>
   );

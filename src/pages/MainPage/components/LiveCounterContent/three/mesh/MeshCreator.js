@@ -14,7 +14,7 @@ const MeshCreator = ({ markerClickHandler, continetalDeathData }) => {
       />
       <Earth />
       <Clouds />
-      {/* <Atmosphere /> */}
+      <Atmosphere />
     </>
   );
 };

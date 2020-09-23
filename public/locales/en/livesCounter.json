@@ -1,3 +1,6 @@
 {
-  "pageTitle": "CONTINENTAL LIVES COUNTER"
+  "pageTitle": "Number of COVID 19 deaths in a given country",
+  "markerClick": "Click marker on globe to show data",
+  "country": "country:",
+  "totalDeaths": "TOTAL DEATHS:"
 }

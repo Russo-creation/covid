@@ -46,10 +46,16 @@ const CreateMarker = ({ lat, lon, id, markerClickHandler, deaths }) => {
     setActive(!active);
   };
 
-  let cylinderRadius = 0.00007 * deaths;
+  let cylinderRadius = 0.0001 * deaths;
 
-  if (cylinderRadius < 10) {
-    cylinderRadius = 3;
+  if (cylinderRadius < 2) {
+    cylinderRadius = 2;
+  }
+
+  let cylinderHeight = 0.001 * deaths;
+
+  if (cylinderHeight < 5) {
+    cylinderHeight = 5;
   }
 
   return (
@@ -71,7 +77,7 @@ const CreateMarker = ({ lat, lon, id, markerClickHandler, deaths }) => {
       >
         <cylinderBufferGeometry
           attach="geometry"
-          args={[cylinderRadius, cylinderRadius, 10, 16]}
+          args={[cylinderRadius, cylinderRadius, cylinderHeight, 16]}
         />
 
         <meshLambertMaterial

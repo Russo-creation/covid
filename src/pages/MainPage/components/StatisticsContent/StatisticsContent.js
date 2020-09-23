@@ -73,19 +73,19 @@ const StatisticsContent = ({ statistics }) => {
   const intersectionConfirmed = useIntersection(sectionRefCovidConfirmed, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.6,
+    threshold: 0.4,
   });
 
   const intersectionDeath = useIntersection(sectionRefCovidDeath, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.6,
+    threshold: 0.5,
   });
 
   const intersectionRecovered = useIntersection(sectionRefCovidRecovered, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.6,
+    threshold: 0.5,
   });
 
   if (sectionRefCovidConfirmed.current && !isMobile) {
@@ -110,15 +110,15 @@ const StatisticsContent = ({ statistics }) => {
       });
     };
 
-    intersectionConfirmed && intersectionConfirmed.intersectionRatio < 0.6
+    intersectionConfirmed && intersectionConfirmed.intersectionRatio < 0.4
       ? fadeOut(".Confirmed")
       : fadeIn(".Confirmed");
 
-    intersectionDeath && intersectionDeath.intersectionRatio < 0.6
+    intersectionDeath && intersectionDeath.intersectionRatio < 0.5
       ? fadeOut(".Death")
       : fadeIn(".Death");
 
-    intersectionRecovered && intersectionRecovered.intersectionRatio < 0.6
+    intersectionRecovered && intersectionRecovered.intersectionRatio < 0.5
       ? fadeOut(".Recovered")
       : fadeIn(".Recovered");
   }

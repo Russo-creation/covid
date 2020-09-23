@@ -9,6 +9,9 @@ import MeshLoader from "./mesh/MeshCreator";
 import Effects from "./effects/Effects.js";
 
 import { ReactReduxContext, Provider } from "react-redux";
+import { Html } from "drei";
+
+import LoadingIndicator from "../../../../../components/LoadingIndicator";
 
 import Curve from "./Curve";
 
@@ -48,6 +51,22 @@ const Controls = (props) => {
   );
   return null;
 };
+
+function LoadingBox() {
+  return (
+    <mesh position={[200, 0, 200]}>
+      <dodecahedronBufferGeometry attach="geometry" />
+      <meshStandardMaterial
+        attach="material"
+        roughness={0.75}
+        emissive="#404057"
+      />
+      <Html scaleFactor={10}>
+        <div className="content">Loading Please Wait</div>
+      </Html>
+    </mesh>
+  );
+}
 
 const ThreeInit = ({ markerClickHandler, continetalDeathData }) => {
   const sun = useRef();
@@ -97,7 +116,7 @@ const ThreeInit = ({ markerClickHandler, continetalDeathData }) => {
               />
             </mesh>
 
-            <Suspense fallback={null}>
+            <Suspense fallback={<LoadingBox />}>
               <group position={[-400, 0, 0]}>
                 <Lights />
                 <MeshLoader

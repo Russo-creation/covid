@@ -20,6 +20,10 @@ export const TitlePage = styled.div`
   padding-top: 30px;
   color: ${(props) => props.theme.light.main};
   text-align: center;
+
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
 `;
 
 export const ThreeContainer = styled.div`
@@ -30,22 +34,33 @@ export const ThreeContainer = styled.div`
   top: 15vh;
   bottom: 10vh;
   box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+
+  @media (max-width: 1024px) {
+    left: 0vw;
+    right: 0vw;
+    top: 20vh;
+    bottom: 20vh;
+  }
 `;
 
 export const ChoosedData = styled.footer`
   position: absolute;
-  // left: 50%;
-
-  //transform: translateX(-50%);
 
   right: 0;
 
   top: 0;
-  border: 1px solid white;
-  color: red;
+  //border: 1px solid white;
+  color: white;
   font-size: 20px;
   padding: 10px;
   z-index: 1;
+
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  box-shadow: 0px 0px 5px 0px ${(props) => props.theme.light.main};
+  background: ${(props) => props.theme.light.main};
 `;
 
 export const Footer = styled.footer`

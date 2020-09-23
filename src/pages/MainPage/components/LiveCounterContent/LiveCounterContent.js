@@ -84,11 +84,15 @@ const LiveCounterContent = () => {
         <ThreeContainer>
           {choosedData ? (
             <ChoosedData>
-              <div>Country: {statisticsSummary[choosedData].country}</div>
-              <div>Total deaths: {statisticsSummary[choosedData].deaths}</div>
+              <div>
+                {t("country")} {statisticsSummary[choosedData].country}
+              </div>
+              <div>
+                {t("totalDeaths")} {statisticsSummary[choosedData].deaths}
+              </div>
             </ChoosedData>
           ) : (
-            <ChoosedData>Click marker on globe to show data</ChoosedData>
+            <ChoosedData>{t("markerClick")}</ChoosedData>
           )}
 
           <ThreeInit

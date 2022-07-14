@@ -2,7 +2,7 @@ name: build app and deploy to prod
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   # Deploy repo on server

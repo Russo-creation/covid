@@ -1,0 +1,38 @@
+name: build app and deploy to prod
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  # Deploy repo on server
+  deploy:
+    name: build app and
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.13.2]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
+
+      - name: install dependencies
+        run: yarn install
+
+      - name: build prod
+        run: yarn run build
+
+      - name: copy build via ssh key
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.PROD_REMOTE_HOST }}
+          username: ${{ secrets.PROD_REMOTE_USER }}
+          key: ${{ secrets.PROD_SSH_KEY }}
+          port: ${{ secrets.PROD_REMOTE_PORT }}
+          rm: true
+          source: '*'
+          target: ~/website/www/
